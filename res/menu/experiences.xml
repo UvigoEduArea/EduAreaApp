@@ -1,0 +1,100 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" 
+    	xmlns:app="http://schemas.android.com/apk/res-auto">
+    	
+    <item android:id="@+id/downloading"
+        android:title="@string/sincronizar"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:visible="false"
+        android:icon="@drawable/cloud_download"/>
+    
+    <item android:id="@+id/synchronize"
+        android:orderInCategory="140"
+        app:showAsAction="always"
+        android:visible="false"
+        android:icon="@drawable/notification"/>
+    
+    <item android:id="@+id/edit"
+        android:title="@string/action_edition_mode"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:icon="@drawable/pencil" />
+    
+    <item android:id="@+id/action_cancel"
+        android:title="@string/action_edition_mode"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:visible="false"
+        android:icon="@drawable/cross" />
+    
+    <item android:id="@+id/action_refresh"
+        android:title="@string/action_refresh"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:icon="@drawable/refresh"/>
+    
+    
+    
+    <item android:id="@+id/action_all_experiences"
+        android:title="@string/action_all_experiences"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_beingPrepared"
+        android:title="@string/action_being_prepared"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    
+    <item android:id="@+id/action_inProgress"
+        android:title="@string/action_in_progress"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    
+    <item android:id="@+id/action_finished"
+        android:title="@string/action_finished"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    
+    <item android:id="@+id/sincronizar"
+        android:title="@string/sincronizar"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    
+    <item android:id="@+id/forzar_sinc"
+        android:title="@string/forzarSincronizacion"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    
+     <item android:id="@+id/select_language"
+        android:title="@string/idioma"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+     
+     
+     
+     <item android:id="@+id/sugerencia"
+        android:title="@string/sugerencia"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+     
+
+     <item android:id="@+id/addExperience"
+        android:title="@string/add_experience"
+        android:orderInCategory="100"
+        android:visible="false"
+        app:showAsAction="never" />
+     
+     <item android:id="@+id/acercaDe"
+        android:title="@string/acercaDe"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:icon="@drawable/exit"/>
+     
+    <item android:id="@+id/action_logout"
+        android:title="@string/action_logout"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:icon="@drawable/exit"/>
+    
+    
+</menu>

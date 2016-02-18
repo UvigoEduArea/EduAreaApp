@@ -1,0 +1,76 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="area.experiencias.tfg.ExperienceViewActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/background"
+        android:src="@drawable/fondo"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/translucent"
+        android:id="@+id/experience_view_layout">
+
+        <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="@color/black">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/copy"
+                android:id="@+id/copy"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textColor="#ffffff"
+                android:background="@drawable/selector_experience_buttons"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="4dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/remove"
+                android:id="@+id/delete"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textColor="#ffffff"
+                android:background="@drawable/selector_experience_buttons"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    
+    
+    <TextView
+        android:id="@+id/modoLocal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/modoLocal"
+        android:background="@color/naranja"
+        android:gravity="center"
+        android:visibility="gone"
+        android:maxLines="1"
+        android:textAppearance="?android:attr/textAppearanceMedium"  />
+
+</FrameLayout>

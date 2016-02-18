@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="area.experiencias.tfg.CommentActivity" >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fondo" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/translucent" />
+
+    <ListView
+        android:id="@+id/commentList"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layEnviar"
+        android:layout_below="@+id/modoLocal"
+        android:divider="@null"
+        android:dividerHeight="2dp"
+        android:padding="10dp"
+        android:scrollbars="none" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:id="@+id/layEnviar"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#CCFFFFFF"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <EditText
+            android:id="@+id/editComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Escribe aquí tu comentario..."
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/sendComment"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_dialog_buttons"
+            android:text="Enviar"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/modoLocal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/azul_transparente"
+        android:gravity="center"
+        android:text="@string/modoLocal"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="area.experiencias.tfg.MapActivity" >
+
+    <item
+        android:id="@+id/MapaNormal"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/mapaNormal"/>
+    <item
+        android:id="@+id/MapaTerreno"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/mapaTerreno"/>
+    <item
+        android:id="@+id/MapaIbrido"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/mapaIbrido"/>
+    <item
+        android:id="@+id/MapaSatelite"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/mapaSatelite"/>
+
+</menu>

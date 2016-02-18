@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="area.experiencias.tfg"
+    android:versionCode="23"
+    android:versionName="1.0.23" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="22" />
+
+    <!-- area.experiencias.tfg -->
+    <!-- edu.area.student -->
+
+
+    <!-- Permisos -->
+    <!-- Conexión a internet -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Escribir en memoria externa -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- Permisos para utilizar la cámara -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!--
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    -->
+
+    <application
+        android:name=".TFGApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/CustomActionBarTheme" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- produccion -->
+        
+             <meta-data
+                android:name="com.google.android.maps.v2.API_KEY"
+                android:value="AIzaSyDPVjbSZsPnXhbEC9Lv6leeYmRTGKfMndo"/>
+       
+
+
+        <!-- debug -->
+        <!-- <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDomXck7xWi0XL7JZhfSBT9f2TfaYWUykQ" /> -->
+
+        <activity
+            android:name=".SplashScreenActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name=".ExperiencesActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_experiences" >
+        </activity>
+        <activity
+            android:name=".ExperienceViewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:parentActivityName=".ExperiencesActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ExperiencesActivity" />
+        </activity>
+        <activity
+            android:name=".ActivityRecordsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:parentActivityName=".ExperienceViewActivity"
+            android:windowSoftInputMode="adjustPan" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ExperienceViewActivity" />
+        </activity>
+        <activity
+            android:name=".CommentActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/comments"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name=".BlurImage"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar" >
+        </activity>
+        <activity
+            android:name=".ActivityViewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:parentActivityName=".ExperienceViewActivity"
+            android:windowSoftInputMode="adjustPan" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ExperienceViewActivity" />
+        </activity>
+        <activity
+            android:name=".RecursoViewAvtivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_recurso_view_avtivity"
+            android:launchMode="singleTop"
+            android:parentActivityName=".ExperienceViewActivity" >
+        </activity>
+        <activity
+            android:name=".EntregaViewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_entrega_view" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ExperienceViewDrawerActivity" />
+        </activity>
+        <activity
+            android:name=".ExperienceViewDrawerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_experience_view_drawer" >
+        </activity>
+        <activity
+            android:name=".ActivityViewDrawerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_activity_view_drawer" >
+        </activity>
+        <activity
+            android:name=".EntregaViewActivityNew"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_entrega_view_activity_new" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ExperienceViewDrawerActivity" />
+        </activity>
+        <activity
+            android:name=".MapActivity"
+            android:label="@string/title_activity_map" >
+        </activity>
+        <activity
+            android:name=".AcercaDe"
+            android:label="@string/title_activity_acerca_de" >
+        </activity>
+    </application>
+
+</manifest>

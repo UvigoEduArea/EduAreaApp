@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+        
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="6dp" >
+
+    <EditText
+        android:id="@+id/tituloRecord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:lines="1"
+        android:maxLines="1"
+        android:inputType="textNoSuggestions"
+        android:hint="Título">
+    </EditText>
+
+    <EditText
+        android:id="@+id/descripcionRecord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tituloRecord"
+        android:ems="10"
+        android:hint="Descripción"
+        android:minLines="2"
+        android:inputType="textMultiLine"/>
+
+    <EditText
+        android:id="@+id/textoRecord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/descripcionRecord"
+        android:ems="10"
+        android:hint="Texto"
+        android:lines="3"
+        android:minLines="3" />
+
+    <LinearLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/videoView"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/save"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="false"
+            android:background="@drawable/selector_dialog_buttons"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/save"
+            android:text="@string/save" />
+
+        <ImageButton
+            android:id="@+id/papelera"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="false"
+            android:background="@drawable/selector_dialog_buttons"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bin"
+            android:visibility="gone"
+            android:text="@string/cancel" />
+		
+        <ImageButton
+            android:id="@+id/full_screen"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="false"
+            android:background="@drawable/selector_dialog_buttons"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            android:src="@drawable/enlarge" />
+        
+        <ImageButton
+            android:id="@+id/play_pause"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="false"
+            android:background="@drawable/selector_dialog_buttons"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            android:src="@drawable/play3" />
+        
+        <ImageButton
+            android:id="@+id/download"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="false"
+            android:background="@drawable/selector_dialog_buttons"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            android:src="@drawable/cloud_download" />
+		
+        <ImageButton
+            android:id="@+id/borrar_caras"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="false"
+            android:background="@drawable/selector_dialog_buttons"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            android:src="@drawable/user"
+            android:text="@string/cancel" />
+        
+        <ImageButton
+            android:id="@+id/cancel"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="false"
+            android:background="@drawable/selector_dialog_buttons"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/cross"
+            android:text="@string/cancel" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imagen"
+        android:layout_width="320dp"
+        android:layout_height="180dp"
+        android:layout_below="@+id/textoRecord"
+        android:maxWidth="320dp"
+        android:maxHeight="180dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:src="@drawable/imagen" />
+    
+    <ImageView
+        android:id="@+id/image_blurred"
+        android:layout_width="320dp"
+        android:layout_height="180dp"
+        android:layout_below="@+id/textoRecord"
+        android:maxWidth="320dp"
+        android:maxHeight="180dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:src="@drawable/imagen" />
+
+    <WebView
+        android:id="@+id/webViewSnippet"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/imagen"
+        android:visibility="gone"
+        android:layout_height="200dp" />
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_below="@+id/webViewSnippet"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true" />
+
+    <ProgressBar
+        android:id="@+id/progressBarVideo"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textoRecord"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true" />
+
+    
+</RelativeLayout>
+</ScrollView>

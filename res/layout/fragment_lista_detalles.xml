@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+<ScrollView 
+    android:id="@+id/ScrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/listaDetalles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical" >
+
+    </LinearLayout>
+    
+  </ScrollView>
+  <TextView
+            android:id="@+id/modoLocal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/naranja"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/modoLocal"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:visibility="gone" />
+  <TextView
+                android:id="@+id/sinElementos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+				android:layout_below="@+id/modoLocal"
+                android:layout_alignParentLeft="true"
+                android:background="@color/naranja"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/sinElementos"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:visibility="gone" />
+  
+  </RelativeLayout>
+    

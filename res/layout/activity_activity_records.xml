@@ -1,0 +1,180 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context="area.experiencias.tfg.ActivityRecordsActivity" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/background"
+        android:src="@drawable/fondo"
+        android:scaleType="centerCrop" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/translucent"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/container"
+        android:layout_gravity="center">
+
+        <view
+            android:id="@+id/activity_pager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/previousActivity"
+            class="android.support.v4.view.ViewPager" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:id="@+id/previousActivity"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/previous"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:padding="4dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="1/2"
+            android:id="@+id/indicator"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:textSize="28sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/previousActivity"
+            android:layout_toLeftOf="@+id/nextActivity" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:id="@+id/nextActivity"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:src="@drawable/next"
+            android:scaleType="fitCenter"
+            android:padding="4dp"/>
+
+        <LinearLayout
+            android:id="@+id/buttons_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            android:visibility="gone"
+            android:background="@color/black"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/addImage"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_experience_buttons"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/image_white"
+                android:visibility="visible" />
+
+            <ImageButton
+                android:id="@+id/addVideo"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_experience_buttons"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/film_white" />
+
+            <ImageButton
+                android:id="@+id/addDocument"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_experience_buttons"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/file_text2_white" />
+
+            <ImageButton
+                android:id="@+id/addSnippet"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_experience_buttons"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/embed2_white" />
+
+            <ImageButton
+                android:id="@+id/addNegativeComment"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_experience_buttons"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/like2_white" />
+
+            <ImageButton
+                android:id="@+id/addPositiveComment"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_experience_buttons"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/like_white" />
+
+            <ImageButton
+                android:id="@+id/addFreeText"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_experience_buttons"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/paragraph_justify_white" />
+
+            <ImageButton
+                android:id="@+id/addIdea"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_experience_buttons"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bulb_white" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/modoLocal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/modoLocal"
+        android:background="@color/azul_transparente"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textAppearance="?android:attr/textAppearanceMedium"  />
+
+</FrameLayout>

@@ -1,0 +1,48 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="area.experiencias.tfg.ExperienceViewActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/background"
+        android:src="@drawable/fondo"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:id="@+id/descripcion_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7" >
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/observaciones_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3" >
+        </FrameLayout>
+
+    </LinearLayout>
+    
+    
+    <TextView
+        android:id="@+id/modoLocal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/modoLocal"
+        android:background="@color/naranja"
+        android:gravity="center"
+        android:visibility="visible"
+        android:maxLines="1"
+        android:textAppearance="?android:attr/textAppearanceMedium"  />
+
+</FrameLayout>

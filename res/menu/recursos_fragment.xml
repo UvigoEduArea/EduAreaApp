@@ -1,0 +1,102 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <item android:id="@+id/synchronize"
+        android:orderInCategory="140"
+        android:showAsAction="always"
+        android:visible="false"
+        android:icon="@drawable/notification"/>
+    
+    <item android:id="@+id/downloading"
+        android:title="@string/sincronizar"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:visible="false"
+        android:icon="@drawable/cloud_download"/>
+    
+    <item android:id="@+id/action_documentation_mode"
+        android:title="@string/action_documentation_mode"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom" 
+        android:visible="false"
+        android:icon="@drawable/edit"/>
+    
+    <item android:id="@+id/action_edition_mode"
+        android:title="@string/action_edition_mode"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:icon="@drawable/pencil" />
+     
+      <item android:id="@+id/action_cancel"
+        android:title="@string/action_edition_mode"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:visible="false"
+        android:icon="@drawable/cross" />
+    
+      
+     
+      
+     <item
+        android:id="@+id/mapa"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:icon="@drawable/location"
+        android:title="@string/mapa"/>
+    
+    
+        
+    <item android:id="@+id/action_refresh"
+        android:title="@string/action_refresh"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:icon="@drawable/refresh"/>
+    
+    
+    <item android:id="@+id/expandir"
+        android:orderInCategory="100"
+        android:showAsAction="always" 
+        android:visible="false"
+        android:icon="@drawable/unfold_more"/>
+    
+    <item android:id="@+id/contraer"
+        android:orderInCategory="100"
+        android:showAsAction="always" 
+        android:visible="false"
+        android:icon="@drawable/unfold_less"/>
+    
+     
+     <item android:id="@+id/lista_actividades"
+        android:title="@string/listaActividades"
+        android:orderInCategory="100"
+        android:visible="false"
+        android:icon="@drawable/list_nested"
+        android:showAsAction="always" />
+    
+    
+    <item android:id="@+id/volver"
+        android:title="@string/volverMP"
+        android:orderInCategory="100"
+        android:showAsAction="never"/>
+    
+     <item android:id="@+id/forzar_sinc"
+        android:title="@string/forzarSincronizacion"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+     
+     <item android:id="@+id/sugerencia"
+        android:title="@string/sugerencia"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+     
+     
+    
+    <item android:id="@+id/action_logout"
+        android:title="@string/action_logout"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:icon="@drawable/exit"/>
+    
+    
+    
+ 
+</menu>

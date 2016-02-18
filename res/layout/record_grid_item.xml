@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/recordItem"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="320dp"
+        android:layout_height="180dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/icono"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/icono"
+        android:layout_width="200dp"
+        android:layout_height="113dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/titulo"
+        android:layout_margin="4dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"/>
+
+    <TextView
+        android:id="@+id/descripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/modificado"
+        android:layout_alignLeft="@+id/icono"
+        android:layout_alignRight="@+id/icono"
+        android:layout_alignTop="@+id/icono"
+        android:text="Descripción"
+        android:padding="5dp"
+        android:background="@drawable/marco"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="4dp"
+        android:layout_toLeftOf="@+id/aviso"
+        android:maxLines="1"
+        android:text="Título"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/holo_blue_light"
+        android:textStyle="bold|italic" />
+
+    <ImageView
+        android:id="@+id/aviso"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_above="@+id/icono"
+        android:layout_alignRight="@+id/icono"
+        android:src="@drawable/notification"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/modificado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/icono"
+        android:layout_marginLeft="3dp"
+        android:layout_toLeftOf="@+id/videoDescargado"
+        android:layout_toRightOf="@+id/tipoRecord"
+        android:text="20-01-2015 \n18:31"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ImageView
+        android:id="@+id/videoDescargado"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/icono"
+        android:layout_alignRight="@+id/icono"
+        android:visibility="gone"
+        android:paddingLeft="2dp"
+        android:src="@drawable/descargado_blue" />
+
+    <ImageView
+        android:id="@+id/tipoRecord"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@+id/modificado"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/image_blue"
+        android:visibility="visible" />
+
+</RelativeLayout>

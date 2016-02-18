@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/experience_item_box" >
+
+    
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/modoLocal"
+        android:orientation="vertical" >
+
+        <ProgressBar
+        android:id="@+id/cargando"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/modoLocal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/naranja"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/modoLocal"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="gone" />
+        
+        
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7" >
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="@dimen/experience_image"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:adjustViewBounds="true"
+                android:padding="2dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/imagen" />
+
+            <RelativeLayout
+                android:id="@+id/titleLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/definitionLayout"
+                android:layout_toRightOf="@+id/image" >
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:hint="@string/title"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="@dimen/experience_title"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/title"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:hint="@string/title"
+                    android:inputType="text"
+                    android:visibility="gone" >
+
+                    <requestFocus />
+                </EditText>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/definitionLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/image" >
+
+                <TextView
+                    android:id="@+id/definition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:hint="@string/hintDefinition"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="@dimen/experience_title"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editDefinition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/definition"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:maxLines="1"
+                    android:hint="@string/hintDefinition"
+                    android:inputType="text"
+                    android:visibility="gone" >
+
+                    <requestFocus />
+                </EditText>
+            </RelativeLayout>
+            
+            <Button
+                android:id="@+id/changeImage"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignBottom="@+id/image"
+                android:layout_alignLeft="@+id/image"
+                android:layout_alignRight="@+id/image"
+                android:background="@drawable/selector_dialog_buttons"
+                android:text="Cambiar"
+                android:textColor="#FFFFFF"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/relDescSuper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/textDescProfe"
+                android:textAllCaps="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/descProfe"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textDescProfe"
+                android:ems="10"
+                android:hint="@string/description"
+                android:minLines="6"
+                android:visibility="gone" />
+
+            <WebView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textDescProfe"
+                android:layout_margin="2dp"
+                android:hint="@string/description"
+                android:paddingStart="4dp"
+                android:textSize="@dimen/experience_description" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_alignBottom="@+id/textDescProfe"
+                android:layout_alignParentLeft="true"
+                android:background="@android:color/black" />
+
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/relDescInf"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/textDescAlum"
+                android:textAllCaps="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="@string/descAlumno"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editDescAlumno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textDescAlum"
+                android:ems="10"
+                android:hint="@string/description"
+                android:minLines="6"
+                android:visibility="gone" />
+
+            <WebView
+                android:id="@+id/descripcionAlumno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textDescAlum"
+                android:layout_margin="2dp"
+                android:hint="@string/description"
+                android:paddingStart="4dp"
+                android:textSize="@dimen/experience_description" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_alignBottom="@+id/textDescAlum"
+                android:layout_alignParentLeft="true"
+                android:background="@android:color/black" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relDetalles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/textDetalles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="@string/detalles"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
+
+	<ScrollView
+	    android:id="@+id/ScrollViewDetalles"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_below="@+id/textDetalles"
+	    android:scrollbars="vertical" >
+    
+    <LinearLayout
+                android:id="@+id/listaDetalles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical" >
+            </LinearLayout>
+            
+        </ScrollView>
+
+	<View
+	    android:layout_width="match_parent"
+	    android:layout_height="3dp"
+	    android:layout_alignBottom="@+id/textDetalles"
+	    android:layout_alignParentLeft="true"
+	    android:background="@android:color/black" />
+            
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

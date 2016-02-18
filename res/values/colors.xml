@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#182B3C</color>
+    <color name="tab_highlight">#cc33b5e5</color>
+    <color name="action_bar">#33b5e5</color>
+    <color name="action_bar_dark">#ff2ea3ce</color>
+    <color name="transparent">#00000000</color>
+    <color name="translucent">#aaFFFFFF</color>
+    <color name="item_box">#CCFFFFFF</color>
+    <color name="black_translucent">#AA000000</color>
+    <color name="edu_area1">#ff1b9dc0</color>
+    <color name="edu_area2">#ff1770dc</color>
+    <color name="edu_area3">#ffe06410</color>
+    <color name="gris_claro">#c9c9c9</color>
+    <color name="azul_transparente">#cc1b9dc0</color>
+    <color name="naranja">#cce87910</color>
+</resources>

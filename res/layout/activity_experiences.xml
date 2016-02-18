@@ -1,0 +1,36 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="area.experiencias.tfg.ExperiencesActivity"
+    tools:ignore="MergeRootFrame">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/background"
+        android:src="@drawable/fondo"
+        android:scaleType="centerCrop" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/translucent"></FrameLayout>
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:dividerHeight="6dp"
+        android:layout_gravity="center_horizontal"
+        android:fastScrollEnabled="true"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="true"
+        android:scrollbars="none">
+    </ListView>
+
+</FrameLayout>

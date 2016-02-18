@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5" >
+
+        <TextView
+            android:id="@+id/modoLocal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/naranja"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/modoLocal"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/image"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5dp"
+            android:hint="@string/title"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="@dimen/experience_title"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="@dimen/experience_image"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/title"
+            android:adjustViewBounds="true"
+            android:padding="2dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/imagen" />
+
+        <WebView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/image"
+            android:layout_margin="4dp"
+            android:hint="@string/description"
+            android:paddingStart="4dp"
+            android:textSize="@dimen/experience_description" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/ficheros"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+    </ListView>
+
+</LinearLayout>

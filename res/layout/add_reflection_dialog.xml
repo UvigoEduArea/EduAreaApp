@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="6dp">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:hint="@string/write_here"
+        android:lines="3"
+        android:gravity="start" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:baselineAligned="false"
+        android:id="@+id/radioGroup"
+        android:layout_below="@+id/editText">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/positive" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/icon_positive"
+                android:src="@drawable/positive" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/negative" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/icon_negative"
+                android:src="@drawable/negative" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonsLayout"
+        android:layout_below="@+id/radioGroup"
+        android:layout_marginTop="10dp">
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="@string/save"
+            android:id="@+id/save"
+            android:src="@drawable/save"
+            android:background="@drawable/selector_dialog_buttons"
+            android:scaleType="fitCenter"
+            android:padding="4dp"
+            android:adjustViewBounds="false"
+            android:layout_weight="1"
+            android:layout_margin="4dp" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="@string/cancel"
+            android:id="@+id/cancel"
+            android:background="@drawable/selector_dialog_buttons"
+            android:src="@drawable/cancel"
+            android:scaleType="fitCenter"
+            android:padding="4dp"
+            android:adjustViewBounds="false"
+            android:layout_weight="1"
+            android:layout_margin="4dp" />
+    </LinearLayout>
+
+</RelativeLayout>

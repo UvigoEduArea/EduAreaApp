@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/recordItem"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageButton
+        android:id="@+id/icono"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="4dp"
+        android:background="@drawable/selector_dialog_buttons"
+        android:src="@drawable/document" />
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="4dp"
+        android:maxLines="1"
+        android:layout_toRightOf="@+id/icono"
+        android:text="Título"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/holo_blue_light"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/descripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/titulo"
+        android:layout_below="@+id/titulo"
+        android:layout_toLeftOf="@+id/botonDescargar"
+        android:autoLink="web"
+        android:linksClickable="true"
+        android:minLines="2"
+        android:maxLines="2"
+        android:text="Descripción"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="italic" />
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="320dp"
+        android:layout_height="180dp"
+        android:visibility="gone"
+        android:layout_below="@+id/descripcion"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/aviso"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:visibility="invisible"
+        android:src="@drawable/notification" />
+
+    <Button
+        android:id="@+id/botonDescargar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/descripcion"
+        android:layout_alignBottom="@+id/descripcion"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:text="@string/save" />
+
+    <TextView
+        android:id="@+id/modificado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/descripcion"
+        android:layout_toLeftOf="@+id/videoDescargado"
+        android:gravity="right"
+        android:text="20-01-2015 \n 18:31"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ImageView
+        android:id="@+id/videoDescargado"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/modificado"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:src="@drawable/descargado_blue"
+        android:visibility="invisible" />
+
+</RelativeLayout>

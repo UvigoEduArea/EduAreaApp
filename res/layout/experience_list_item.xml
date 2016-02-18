@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/experience_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/experience_item_box"
+    android:padding="12dp" >
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/experience_image"
+        android:layout_height="@dimen/experience_image"
+        android:layout_margin="4dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/imagen" >
+    </ImageView>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/image"
+        android:layout_alignTop="@+id/image"
+        android:layout_margin="4dp"
+        android:layout_toRightOf="@+id/image" >
+
+        <ImageView
+            android:id="@+id/aviso"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/notification"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/definition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="2dp"
+            android:layout_toLeftOf="@+id/aviso"
+            android:hint="@string/hintDefinition"
+            android:maxLines="1"
+            android:paddingStart="2dp"
+            android:textSize="@dimen/experience_title"
+            android:textStyle="bold" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/definition"
+            android:layout_margin="2dp"
+            android:layout_toLeftOf="@+id/aviso"
+            android:maxLines="2"
+            android:paddingStart="2dp"
+            android:textSize="@dimen/experience_title"
+            android:textStyle="bold" >
+        </TextView>
+
+        <WebView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/title"
+            android:layout_alignStart="@+id/title"
+            android:layout_below="@+id/title"
+            android:layout_margin="2dp"
+            android:layout_toLeftOf="@+id/a"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:maxLines="2"
+            android:paddingBottom="2dp"
+            android:paddingStart="2dp"
+            android:textSize="@dimen/experience_description" />
+
+        <ImageView
+            android:id="@+id/eliminar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/aviso"
+            android:src="@drawable/bin_black"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image" >
+
+        <ImageView
+            android:id="@+id/atDate"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/descargado_blue"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/autor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/commentButton"
+            android:gravity="right"
+            android:text="Juan \n Fernandez"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/numComentarios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/atDate"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <ImageButton
+            android:id="@+id/commentButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/numComentarios"
+            android:background="@null"
+            android:focusable="false"
+            android:scaleType="fitCenter"
+            android:src="@drawable/comment_dark"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

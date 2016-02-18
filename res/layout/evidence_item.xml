@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="4dp"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/iconType"
+            android:background="@drawable/selector_dialog_buttons"
+            android:src="@drawable/image"
+            android:scaleType="fitCenter"
+            android:padding="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="image"
+            android:id="@+id/type"
+            android:layout_toRightOf="@+id/iconType"
+            android:layout_alignBottom="@+id/iconType"
+            android:layout_alignTop="@+id/iconType"
+            android:gravity="center"
+            android:layout_marginLeft="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/update"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:textSize="16sp"
+            android:layout_alignBottom="@+id/iconType" />
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/download"
+            android:background="@drawable/selector_dialog_buttons"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:padding="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/update"
+            android:maxHeight="200dp"
+            android:maxWidth="200dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="6dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Description"
+            android:id="@+id/description"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:layout_alignParentBottom="false"
+            android:layout_toRightOf="@+id/download"
+            android:layout_alignTop="@+id/download"
+            android:layout_marginLeft="8dp"
+            android:layout_toLeftOf="@+id/comment" />
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/comment"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:src="@drawable/comment_dark"
+            android:scaleType="fitCenter"
+            android:layout_below="@+id/download"
+            android:layout_alignParentLeft="false"
+            android:layout_marginRight="6dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

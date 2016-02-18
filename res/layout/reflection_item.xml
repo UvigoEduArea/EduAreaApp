@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/update"
+        android:layout_alignParentRight="true"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/icon"
+        android:scaleType="fitCenter"
+        android:layout_below="@+id/update" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/text"
+        android:hint="Reflexion text..."
+        android:layout_toRightOf="@+id/icon"
+        android:layout_marginLeft="6dp"
+        android:layout_alignParentRight="false"
+        android:layout_toLeftOf="@+id/comment"
+        android:layout_alignTop="@+id/icon"
+        android:layout_alignBottom="@+id/icon"
+        android:gravity="center_vertical"
+        android:textSize="20sp" />
+
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/comment"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:src="@drawable/comment_dark"
+        android:scaleType="fitCenter"
+        android:layout_below="@+id/text" />
+</RelativeLayout>
